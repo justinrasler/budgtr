@@ -6,7 +6,7 @@ const budget = require("./models/budget")
 app.use(express.static('public'))
 
 app.get("/budget", (req,res) => {
-    res.render('index.ejs')
+    res.render('index.ejs', {allBudget:budget})
 })
 app.get("/budget/:indexOfBudgetArray", (req,res) => {
     res.send(budget[req.params.indexOfBudgetArray])

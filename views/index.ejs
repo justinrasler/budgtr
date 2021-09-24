@@ -10,8 +10,15 @@
 </head>
 <body>
     <div class="container">
+        
         <h1>Budgtr ALL</h1>
-        <a href="/budget/new">Add expense</a>
+        <h4><%if (savings < 0){ %>
+            your account is in the negative:
+            <% } else if(savings >= 5000){ %>
+            your account is in great standing:
+            <% } %>
+            <%= savings %> </h4>
+        <button><a href="/budget/new">Add expense/income</a></button>
         <table>
             <% for(let i = 0; i < allBudget.length; i++) { %>
             <tr>
@@ -21,6 +28,8 @@
                   <a href="/budget/<%=i%>"><%=allBudget[i].name%></a>
 
                    
+                  <%=allBudget[i].from%>
+
 
                    <%=allBudget[i].amount%>
 

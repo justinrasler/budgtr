@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>budget</title>
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Retirement</h1>
+        <a href="/budget/">BACK</a>
+        <table>
+            <tr>
+                <td>
+                    <h5>date</h5>
+                    <%= budgets.date%>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>name</h5>
+                    <%= budgets.name%>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>from</h5>
+                    <%= budgets.from%>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>amount</h5>
+                    <%= budgets.amount%>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>tags</h5>
+                    <%= budgets.tags%>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>
